@@ -1,0 +1,209 @@
+/*    CSS Reset   */
+html, body, div, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+.container {
+  margin: 0 auto;
+  display: block;
+  width: 70%;
+  background: white;
+  padding: 0 10%;
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+
+/*  Header  */
+
+.logo img {
+  margin: 0 auto;
+  display: block;
+  padding-top: 10px;
+}
+
+.nav {
+  text-align: center;
+  margin: 15px 0;
+  position: relative;
+}
+
+form {
+  position: absolute;
+  right: 0;
+  top: -4px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: white;
+  background: #111;
+  padding: 5px;
+}
+
+a.nav-btn:visited {
+  color: lightgray;
+}
+
+
+a.nav-btn:hover {
+  background: #999;
+  color: black;
+  -webkit-transition: all .5s;
+  transition: all .2s;
+}
+
+/* Main image */
+
+.bg-img {
+  width: 100%;
+  margin: 20px 0;
+  height: 300px;
+  background: url(http://lorempixel.com/800/300);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-img span {
+  display: none;
+}
+
+.bg-img:hover span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  line-height: 300px;
+}
+
+/* Thumbnails */
+
+.thumbnails {
+  width: 100%;
+}
+
+.tmb-img {
+  background: url(http://lorempixel.com/350/150);
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+}
+
+.tmb-img span {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.tmb-img:hover span {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  line-height: 150px;
+}
+
+.tmb {
+  display: inline-block;
+  width: 33%;
+  text-align: left;
+}
+
+.tmb>img {
+  width: 100%;
+}
+
+/* Media Queries */
+
+/* max-width: 1010px */
+@media (max-width: 1010px) {
+  .tmb {
+    width: 32.5%
+  }
+}
+
+/* max-width: 850px */
+@media (max-width: 850px) {
+  .nav input {
+    width: 70px;
+  }
+
+  .bg-img {
+    background: url(http://lorempixel.com/500/300);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .tmb-img {
+    background: url(http://lorempixel.com/200/200);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+}
+
+/* max-width: 650px */
+@media (max-width: 650px) {
+  .nav input {
+    display: none;
+  }
+
+  .bg-img {
+    background: url(http://lorempixel.com/400/300);
+  }
+}
+
+
+/* max-width: 500px */
+@media (max-width: 500px) {
+
+  .container {
+    width: 80%;
+    padding: 0 5%;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .nav {
+    margin: 0;
+  }
+
+  .nav-btn {
+    display: list-item;
+    list-style: none;
+  }
+
+  .bg-img {
+    background: url(http://lorempixel.com/300/300);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .tmb-img {
+    background: url(http://lorempixel.com/150/100);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .tmb {
+    width: 100%;
+  }
+
+  .thumbnails::before {
+    content: 'Featured Images';
+  }
+}
